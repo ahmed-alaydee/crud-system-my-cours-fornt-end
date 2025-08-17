@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud System</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<body>
+
+  <nav class="navbar bg-body-tertiary border-bottom">
+    <div class="container">
+      <span class="navbar-brand fw-bold"><i class="bi bi-people-fill me-2"></i>Users</span>
+      <button id="themeToggle" class="btn btn-outline-secondary rounded-pill">
+        <i class="bi bi-moon-stars"></i><span class="ms-1">Dark</span>
+      </button>
+    </div>
+  </nav>
+
+
+
+
+
+
+  
+  <div class="container py-4 py-md-5">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="mb-3">Add / Edit User</h5>
+
+        <form id="form" class="row g-3">
+          <div class="col-md-6">
+            <label for="nameInp" class="form-label">Full Name</label>
+            <input name="name" id="nameInp" type="text" class="form-control" placeholder="Enter Your Name ">
+          </div>
+          <div class="col-md-6">
+            <label for="phoneInp" class="form-label">Phone</label>
+            <input name="phone" id="phoneInp" type="tel" class="form-control" placeholder="+20 10 123 4567">
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input required name="email" type="email" class="form-control" id="emailInp" placeholder="name@example.com">
+              <label for="emailInp">Email address</label>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input required name="age" type="number" class="form-control" id="ageInp" placeholder="Age">
+              <label for="ageInp">Age</label>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button type="submit" id="submitBtn" class="btn btn-primary rounded-pill px-5">Save</button>
+            <button type="reset" class="btn btn-outline-danger rounded-pill ms-2">Reset</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">email</th>
+                <th scope="col">age</th>
+                <th scope="col">name</th>
+                <th scope="col">phone</th>
+                <th scope="col">actions</th>
+              </tr>
+            </thead>
+            <tbody id="usersContainer"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index:1080">
+      <div id="mainToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body" id="toastMsg">Saved!</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
